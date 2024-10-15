@@ -1,0 +1,629 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #c9d1d9;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #8a2be2, #2f2f2f, #4b000f);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  font-family: 'Afacad', sans-serif;
+}
+
+p {
+  font-family: 'Oxanium', cursive;
+}
+
+/* Navigation Styles */
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 30px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 80%;
+  border-radius: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Oxanium', cursive;
+}
+
+nav ul.main-nav li a, nav ul.main-nav li button {
+  font-size: 15px;
+  color: #c9d1d9;
+  padding: 5px 12px;
+  font-weight: 400;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul.main-nav li a.active, nav ul.main-nav li button.active {
+  background-color: rgba(88, 166, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px 14px;
+}
+
+nav ul.main-nav li button {
+  background-color: transparent;
+  border: 1px solid #58a6ff;
+  color: #58a6ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.main-nav li button:hover {
+  background-color: #58a6ff;
+  color: #0d1117;
+}
+
+/* Hero Section Styles */
+.hero {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  color: #58a6ff;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #8b949e;
+}
+
+.hero-content h1 {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 100px;
+}
+
+.centered-line {
+  width: 60%; /* 60% of the page width */
+  height: 2px; /* Thickness of the line */
+  background-color: #bf3221; /* Color of the line */
+  margin: 0 auto; /* Center the line horizontally */
+  display: block; /* Make it a block element */
+}
+
+
+
+/* Work Section Styles */
+/* Base Styles for Work Section */
+.work {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #c9d1d9;
+}
+
+.section-title1{
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  background-color: rgba(155, 89, 182, 0.3);
+}
+
+.card h3 {
+  text-align:center;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card p {
+  text-align:center;
+  color: #c9d1d9;
+}
+
+/* Logo Styling */
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+/* Black and White Logos initially */
+.logo.logo1 {
+  background-image: url('./assets/logos/Pheratech-BW.png'); /* Black and white version */
+}
+
+.logo.logo2 {
+  background-image: url('./assets/logos/LHPS-BW.png');
+}
+
+.logo.logo3 {
+  background-image: url('./assets/logos/HMC-BW.png');
+}
+
+/* Full-color logos on hover */
+.card:hover .logo.logo1 {
+  background-image: url('./assets/logos/Pheratech-Full.png'); /* Full-color version */
+}
+
+.card:hover .logo.logo2 {
+  background-image: url('./assets/logos/LHPS-Full.png');
+}
+
+.card:hover .logo.logo3 {
+  background-image: url('./assets/logos/HMC-Full.png');
+}
+
+/*Research*/
+.center-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  margin-top: 50px; /* Adjust margin to push down from the top if needed */
+}
+
+.tab-container {
+  width: 80vw; /* Set width to 80% of the viewport */
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#Education {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: 1/3 for name, 2/3 for experience */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px 30px 30px 30px;
+  border-radius: 10px;
+}
+
+/* Left Column (Bio Information) */
+.education-header {
+  text-align: left;
+}
+
+.education-header h2 {
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.education-header p {
+  font-size: 18px;
+  color: #d1d1d1;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.open-button {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  border-width: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid #8a2be2;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 60px;
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80vw;
+  max-width: 600px;
+  margin: 10% auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Modal Header */
+.modal h2 {
+  color: #8a2be2;
+  font-family: 'Afacad', sans-serif;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+/* Modal Paragraph */
+.modal p {
+  font-family: 'Oxanium', cursive;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Scrollable Table Container */
+.scroll-container {
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+  margin-top: 10px;
+  border-top: 2px solid #8a2be2;
+}
+
+/* Distinct Semester Block Styling */
+.semester-block {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #8a2be2;
+  padding-bottom: 10px;
+}
+
+/* Semester Titles */
+.semester-block h3 {
+  color: #8a2be2;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: 'Afacad', sans-serif;
+}
+
+/* Table Styling */
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Oxanium', cursive;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.course-table th, .course-table td {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.course-table th {
+  background-color: #8a2be2;
+  color: #fff;
+}
+
+.course-table td {
+  text-align: left;
+}
+
+/* Scrollbar styling */
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #444;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #8a2be2;
+  border-radius: 8px;
+}
+
+/* Modal Transition */
+.modal-content {
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Button Hover Effect */
+.open-button:hover {
+  background-color: transparent;
+  color: #8a2be2;
+  border-color: #8a2be2;
+}
+
+/* Right Column (Experience) */
+.experience-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.experience-entry h4 {
+  font-size: 16px;
+  color: #a1a1a1;
+  margin-top: 10px;
+}
+
+.experience-details {
+  max-width: 80%;
+}
+
+.experience-details h3 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.experience-details p {
+  color: #cfcfcf;
+  margin-bottom: 10px;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #2d2d47;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.tag:hover {
+  background-color: #4c4c79;
+}
+
+/* Tab buttons */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+}
+
+.tab-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+.tab-button:hover {
+  background-color: #555;
+}
+
+.tab-button.active {
+  background-color: #8a2be2; /* Active tab style */
+  color: #fff;
+}
+
+/* Content areas */
+.tab-content {
+  display: none; /* Hide content by default */
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 20px;
+  margin-top: 10px;
+  height: 300px;
+  max-height: 300px; /* Set the maximum height for the content area */
+  overflow-y: auto; /* Enable vertical scrolling when content overflow*/
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h3 {
+  color: #58a6ff;
+}
+
+.tab-content p {
+  font-size: 16px;
+}
+
+/* Make the tab content visible when activated */
+.tab-content.active {
+  display: block;
+}
+
+.entry {
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle background for each entry */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.entry:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.entry h4 {
+  color: #58a6ff;
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.entry .authors {
+  color: #c9d1d9;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.entry .description {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Dividers between sections */
+.entry + .entry {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+/* Badge Styling */
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.badge.patent {
+  background-color: #e74c3c; /* Red for patents */
+}
+
+.badge.project {
+  background-color: #3498db; /* Blue for projects */
+}
+
+.badge.paper {
+  background-color: #2ecc71; /* Green for papers */
+}
+
+/* Entry Styling (Already present) */
+.entry {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.entry:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.entry h4 {
+  color: #58a6ff;
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.entry .authors {
+  color: #c9d1d9;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.entry .description {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #0d1117;
+  padding: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-content {
+  color: #8b949e;
+  margin-bottom: 20px;
+}
+
+footer ul.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer ul.social-links li a {
+  color: #c9d1d9;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+footer ul.social-links li a:hover {
+  color: #58a6ff;
+}
